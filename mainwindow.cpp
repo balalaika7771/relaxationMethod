@@ -6,10 +6,12 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->input,&inputMatrix::matrixUpdate,ui->method,&relaxation::matrixUpdate);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
