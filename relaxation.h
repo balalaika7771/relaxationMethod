@@ -4,7 +4,6 @@
 #include <QWidget>
 #include "inputmatrix.h"
 #include <QSharedPointer>
-#include <QtCharts>
 namespace Ui {
 class relaxation;
 }
