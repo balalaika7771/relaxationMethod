@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>562</width>
-    <height>345</height>
+    <width>687</width>
+    <height>506</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,67 +40,101 @@
        </widget>
       </item>
       <item>
-       <widget class="QDoubleSpinBox" name="epsSpin">
+       <widget class="QFrame" name="frame_2">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
           <horstretch>0</horstretch>
-          <verstretch>1</verstretch>
+          <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="decimals">
-         <number>8</number>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
         </property>
-        <property name="maximum">
-         <double>10.000000000000000</double>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
         </property>
-        <property name="singleStep">
-         <double>0.000100000000000</double>
-        </property>
-        <property name="stepType">
-         <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
-        </property>
-        <property name="value">
-         <double>0.001000000000000</double>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QDoubleSpinBox" name="wSpin">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>1</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="maximum">
-         <double>1.000000000000000</double>
-        </property>
-        <property name="value">
-         <double>0.750000000000000</double>
-        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="epsSpin">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="decimals">
+            <number>8</number>
+           </property>
+           <property name="maximum">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.000100000000000</double>
+           </property>
+           <property name="stepType">
+            <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+           </property>
+           <property name="value">
+            <double>0.001000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>eps</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="wSpin">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.750000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>W</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="view">
+    <widget class="Chart" name="chart" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>5</horstretch>
+       <horstretch>4</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Chart</class>
+   <extends>QWidget</extends>
+   <header>chart.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
